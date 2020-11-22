@@ -12,11 +12,12 @@ jobs:
     steps:
     - name: Setup Python
       uses: actions/checkout@v2
+    - name: setup python2
       uses: actions/setup-python@v2
-      
+   - name: setup python3 
       with:
         python-version: '3.9'
-  
+  - name: setup python4
       run: python my_script.py
       
 
