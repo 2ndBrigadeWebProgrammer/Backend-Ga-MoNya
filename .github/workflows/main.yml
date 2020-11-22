@@ -10,14 +10,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Setup Python
-      uses: actions/checkout@v2
-    - name: setup python2
-      uses: actions/setup-python@v2
-   - name: setup python3 
-      with:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v
+      - with:
         python-version: '3.9'
-  - name: setup python4
-      run: python my_script.py
+        architecture: 'x64'
+      - name: setup python4
+        run: python my_script.py
       
 
