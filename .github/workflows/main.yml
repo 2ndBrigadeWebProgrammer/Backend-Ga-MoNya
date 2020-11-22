@@ -1,7 +1,7 @@
 
 name: start
 
-on:[commit]
+on: [commit]
 
 jobs:
   build:
