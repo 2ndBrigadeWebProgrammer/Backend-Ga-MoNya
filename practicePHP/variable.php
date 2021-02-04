@@ -46,6 +46,79 @@
 	}
 	
 	function defineFunc() {
-		
+		define("Message","Hey, Hey you!",true);
+		echo MEsSaGe,"\n";
+		echo constant("Message");  
 	}
+
+	function specialVariable() {
+		//special variable starts and ends with double underscore(__).
+		//case insensitive.
+		//resolved at compile-time.
+		
+		//__LINE__
+		echo "line number is ".__LINE__,"\n";
+		
+		//__FILE__
+		echo "file path is ".__FILE__."\n";
+		
+		//__DIR__
+		echo "directory : ".__DIR__."\n";
+		echo "directory : ".dirname(__FILE__)."\n";
+		
+		//__FUNCITON__
+		echo "This function is ".__FUNCTION__."\n";
+		
+		//...?
+	}
+
+	function arrayTest() {
+		$names =array("Kyungmin", "Seunghyun","Haedon","Jihoon","Dohyun");
+		echo $names[0]."\n";
+		echo $names[1]."\n";
+		echo $names[2]."\n";
+	}
+
+	function execution() {
+		echo `whoami`;
+	}
+	
+	function switchCase () {
+		//PHP allows you to use number, character, string, as well as functions in switch expression.
+		$ch = 'c';  
+    switch ($ch)  
+		{     
+			case 'a': case 'e': case 'i': case 'o': case 'u':   
+			case 'A': case 'E': case 'I': case 'O': case 'U':   
+				echo "Given character is vowel"; break;
+
+			default:    
+				echo "Given character is consonant";  break;  
+		}
+	}
+
+	function funcCallByRef () {
+		function adder(&$str2)  {  	$str2 .= 'Call By Reference';  }  
+		//putting ampersand at the start of variable name is passing the reference. 
+		
+		$str = 'Hello ';  
+		adder($str);  
+		echo $str;  //the string is changed, because of call by reference. 
+	}
+	function defaultValue() {
+		function sayHello($name="Sonoo") {  echo "Hello $name ";  }  
+		sayHello("Rajesh");  
+		sayHello();//passing no value  
+		sayHello("John");
+	}
+
+	function associatArray() {
+		$salary=array("Sonoo"=>"550000","Vimal"=>"250000","Ratan"=>"200000");  
+		echo "Sonoo salary: ".$salary["Sonoo"]."\n";  
+		echo "Vimal salary: ".$salary["Vimal"]."\n";  
+		echo "Ratan salary: ".$salary["Ratan"]."\n";  
+	}
+
+	
+
 ?>
