@@ -1,3 +1,4 @@
+<html>
 <?php
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
@@ -15,14 +16,18 @@
     else echo "<h3>This is a php embbeded title</h3>";
 ?>
 
-    <html>
-        <head>
-	        <title>제목</title>
-        </head>
+    <head>
+        <meta charset="utf-8">
+	    <title>MinsaPay</title>
+    </head>
     <body>
-        <h1>This is a Title</h1>
-        <h2>This is a second title</h2>
-        <h3>This is a third title</h3>
+        <h1>Home</h1>
+        <h3>Welcome to MinsaPay</h3>
+        <form action="login.php">
+            <input type="button" name="login" value="AUTHORIZED USER ONLY">
+        </form>
+        <form action="balance.php">
+            <input type="button" name="balance" value="Balance Check (로그인 불필요)">
+        </form>
     </body>
-
 </html>
