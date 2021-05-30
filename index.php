@@ -7,7 +7,12 @@
     $db = substr($url["path"], 1);
 
     $conn = new mysqli($server, $username, $password, $db);
-    echo "<h3>This is a php embbeded title</h3>";
+    if ($mysqli -> connect_errno) {
+      echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+      exit();
+    }
+
+    else echo "<h3>This is a php embbeded title</h3>";
 ?>
 
     <html>
