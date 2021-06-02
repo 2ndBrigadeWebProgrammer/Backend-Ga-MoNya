@@ -36,7 +36,7 @@
         </tr>
             <tr>
             <td>Spark plugs</td>
-            <td> <input type="text" name="tireqty" size="3" maxlength="3"/></td>
+            <td> <input type="text" name="sparkqty" size="3" maxlength="3"/></td>
         </tr>
         <tr>
         <td colspan="2" style="text-align:center"><input type="submit" value="Submit Order"/>            </td>
