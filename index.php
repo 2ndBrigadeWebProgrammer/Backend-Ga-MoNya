@@ -15,15 +15,33 @@
 
     else echo "<h3>This is a php embbeded title</h3>";
 ?>
-
     <head>
-        <meta charset="utf-8">
-	    <title>MinsaPay</title>
+        <title>Test</title>
     </head>
     <body>
-        <h1>Home</h1>
-        <h3>Welcome to MinsaPay</h3>
-            <input type="button" onclick="login.php" name="login" value="AUTHORIZED USER ONLY">
-            <input type="button" onclick="balance.php"name="balance" value="Balance Check (로그인 불필요)">
+        <form action="processorder.php" method="post">
+        <table style="border:0;">
+        <tr style="background:#cccccc">
+            <td style="width: 150px; text-align:center;">Item</td>
+            <td style="width: 15px; text-align:center;">Quantity</td>
+            </tr>
+        
+        <tr>
+            <td>Tires</td>
+            <td> <input type="text" name="tireqty" size="3" maxlength="3"/></td>
+        </tr>
+            <tr>
+            <td>Oil</td>
+            <td> <input type="text" name="oilqty" size="3" maxlength="3"/></td>
+        </tr>
+            <tr>
+            <td>Spark plugs</td>
+            <td> <input type="text" name="tireqty" size="3" maxlength="3"/></td>
+        </tr>
+        <tr>
+        <td colspan="2" style="text-align:center"><input type="submit" value="Submit Order"/>            </td>
+            </tr>
+            </table>
+        </form>
     </body>
 </html>
