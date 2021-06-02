@@ -23,11 +23,7 @@
     <body>
         <h1>Home</h1>
         <h3>Welcome to MinsaPay</h3>
-        <form action="login.php">
-            <input type="button" name="login" value="AUTHORIZED USER ONLY">
-        </form>
-        <form action="balance.php">
-            <input type="button" name="balance" value="Balance Check (로그인 불필요)">
-        </form>
+            <input type="button" onclick="login.php" name="login" value="AUTHORIZED USER ONLY">
+            <input type="button" onclick="balance.php"name="balance" value="Balance Check (로그인 불필요)">
     </body>
 </html>
