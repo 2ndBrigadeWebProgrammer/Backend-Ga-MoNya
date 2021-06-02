@@ -4,10 +4,20 @@
         <title>Bob's Auto Parts -Order Results</title>
     </head>
     <body>
+        <?
+        $tireqty =$_POST['tireqty'];
+        $oilqty =$_POST['oilqty'];
+        $sparkqty =$_POST['sparkqty'];
+        ?>
         <h1>Bob's Auto Parts</h1>
         <h2>Order Results</h2>
         <?
-            echo "<p>Order processed at".date('H:i, js F Y')."</p>";
+            echo "<p>Order processed at ".date('H:i, jS F Y')."</p>";
+        
+            echo "<p> Your order is as follows: </p>";
+            echo htmlspecialchars($tireqty).' tires<br/>';
+            echo htmlspecialchars($oilqty).' bottles of oil<br/>';
+            echo htmlspecialchars($sparkqty).' spark plugs <br/>';
         ?>
     </body>
 </html>
